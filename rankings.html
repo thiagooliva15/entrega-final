@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Argendinos: Rankings</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <header> 
+      <a href="index.html">
+        <img src="img/logo.jpg" class="logo-img" alt="foto de dinosaurio">
+        <p class="logo-nombre">DINOSAURIOS DE ARGENTINA 
+        </p>
+      </a>
+  
+      <nav>
+        <ul>
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="periodo.html" class="nav-link">Períodos</a></li>
+          <li><a href="rankings.html" class="nav-link">Rankings</a></li>
+          <li><a href="merch.html" class="nav-link">Merchandising</a></li>
+          <li><a href="nosotros.html" class="nav-link">Acerca de Nosotros</a></li>
+        </ul>
+        
+      </nav>    
+    </header>
+
+    <div id="trends-graph"></div>
+    <h3>Búsquedas del dinosaurio más grande en Argentina en el último año</h3>
+    <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3461_RC01/embed_loader.js"></script>
+    <script type="text/javascript">
+      trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"dinosaurio más grande","geo":"AR","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"geo=AR&q=dinosaurio%20m%C3%A1s%20grande&hl=es&date=today 12-m","guestPath":"https://trends.google.es:443/trends/embed/"});
+    </script>
+    <h3>mi idea es agregar más</h3>
+</body>
+   
