@@ -3,38 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Argendinos: Rankings</title>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     
+    <!--LOGO Y TÍTULO  clases:logo, logo-img, logo-nombre-->
     <header> 
-      <a href="index.html">
+      <a href="index.html" class="logo">
         <img src="img/logo.jpg" class="logo-img" alt="foto de dinosaurio">
         <p class="logo-nombre">DINOSAURIOS DE ARGENTINA 
         </p>
       </a>
-  
-      <nav>
-        <ul>
+      <!--NAV BAR CON BOTONES   clases: nav, nav-list, nav-link, abrir-menu, cerrar-menu-->
+      <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+      <nav class="nav" id="nav">
+        <button class="cerrar-menu" id="cerrar"> <i class="bi bi-x"></i></button>
+        <ul class="nav-list">
           <li><a href="index.html" class="nav-link">Inicio</a></li>
           <li><a href="periodo.html" class="nav-link">Períodos</a></li>
           <li><a href="rankings.html" class="nav-link">Rankings</a></li>
           <li><a href="merch.html" class="nav-link">Merchandising</a></li>
           <li><a href="nosotros.html" class="nav-link">Acerca de Nosotros</a></li>
         </ul>
-        
       </nav>    
     </header>
-
-    <div id="trends-graph"></div>
-    <h3>Búsquedas del dinosaurio más grande en Argentina en el último año</h3>
-    <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3461_RC01/embed_loader.js"></script>
-    <script type="text/javascript">
+    <!--Gráficos clases:graficos-->
+    <div class="graficos" id="trends-graph">
+      <h3>Búsquedas del dinosaurio más grande en Argentina en el último año</h3>
+      <p>Los números reflejan el interés de búsqueda en relación con el valor máximo de un gráfico en una región y un periodo determinados. Un valor de 100 indica la popularidad máxima de un término, mientras que 50 y 0 indican que un término es la mitad de popular en relación con el valor máximo o que no había suficientes datos del término, respectivamente. Así serán las medidas para todos los gráficos de la página.</p>
+      <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3461_RC01/embed_loader.js"></script>
+      <script type="text/javascript">
       trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"dinosaurio más grande","geo":"AR","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"geo=AR&q=dinosaurio%20m%C3%A1s%20grande&hl=es&date=today 12-m","guestPath":"https://trends.google.es:443/trends/embed/"});
-    </script>
-    <h3>mi idea es agregar más</h3>
+      </script>
+    </div>
+    <br><br><br>
+    <div class="graficos" id="trends-graph">
+      <h3>El Juego de dinosaurios más buscado de Argentina el último año</h3>
+      <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3523_RC02/embed_loader.js"></script> 
+      <script type="text/javascript">
+      trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"Dinosaurio Género","geo":"AR","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"geo=AR&q=Dinosaurio%20G%C3%A9nero&hl=es&date=today 12-m","guestPath":"https://trends.google.es:443/trends/embed/"}); 
+      </script>
+    </div>
+    
+    <br><br><br><br><br><br>
+
+    <!-- FOOTER -->
+  <footer>
+    <a href="index.html">
+        <img src="img/logo.jpg" class="logo-img" alt="foto de dinosaurio">
+    </a>
+    <div>
+      <p>© 2023 Argendinos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+    <script src="./js/main.js"></script>
 </body>
    
